@@ -1,0 +1,45 @@
+{
+  "name": "selenium-tests-estudiantes-itla",
+  "version": "1.0.0",
+  "description": "Pruebas automatizadas para Sistema de Gestión de Estudiantes ITLA",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles --forceExit",
+    "test:html": "jest --detectOpenHandles --forceExit --reporters=default --reporters=jest-html-reporters",
+    "test:single": "jest --testNamePattern",
+    "test:dashboard": "jest tests/dashboard-complete.test.js",
+    "test:login": "jest tests/login.test.js",
+    "test:create": "jest tests/create-student.test.js",
+    "test:search": "jest tests/search-student.test.js",
+    "test:update": "jest tests/update-student.test.js",
+    "test:delete": "jest tests/delete-student.test.js",
+    "test:all": "jest --runInBand --verbose",
+    "test:report": "jest --runInBand --verbose --reporters=default --reporters=jest-html-reporters",
+    "serve": "live-server --port=3000 --open=false --no-browser",
+    "app:start": "cd ../SystemaDeGestionEstudiantes && live-server --port=3001 --open=false"
+  },
+  "keywords": [
+    "selenium",
+    "testing",
+    "automation",
+    "itla"
+  ],
+  "author": "Tu Nombre",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.8",
+    "live-server": "^1.2.2",
+    "selenium-webdriver": "^4.15.0",
+    "webdriver-manager": "^12.1.9"
+  },
+  "jest-html-reporters": {
+    "publicPath": "./reports",
+    "filename": "test-results.html",
+    "openReport": true,
+    "pageTitle": "Pruebas Selenium - Sistema Estudiantes ITLA"
+  }
+}

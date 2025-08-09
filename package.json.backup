@@ -1,0 +1,21 @@
+{
+  "name": "selenium-tests-estudiantes-itla",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chromedriver": "^139.0.0",
+    "jest": "^30.0.5",
+    "jest-html-reporters": "^3.1.7",
+    "selenium-webdriver": "^4.34.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0"
+  }
+}
